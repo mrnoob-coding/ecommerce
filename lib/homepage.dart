@@ -166,9 +166,9 @@ class _HomepageState extends State<Homepage> {
               )
             ],
           ),
+          SizedBox(height: 15),
           Container(
-            // margin: EdgeInsets.symmetric(vertical: 10.0),
-              height: 200,
+              height: 230,
             child: GridView(gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 4,mainAxisSpacing: 30),
             children: [
               Gridview_img('images/ui elements/homepage/bag.png','Designer bags'),
@@ -186,11 +186,17 @@ class _HomepageState extends State<Homepage> {
             ],
             ),
           ),
-          Container(
+          SizedBox(
+            height: 30.0,
+          ),
+          SizedBox(
             height: MediaQuery.of(context).size.height*1/4.5,
               width: MediaQuery.of(context).size.width,
               child: Image(image: AssetImage('images/ui elements/homepage/bottomline.png'),fit: BoxFit.fill,),
           ),
+          BottomNavigationBar(items: [
+            
+          ],),
           ],
         ),
       ),),

@@ -9,6 +9,31 @@ class Homepage extends StatefulWidget {
 }
 
 class _HomepageState extends State<Homepage> {
+  Container ListView_horizontal (String Imageval){
+    return Container(
+                    width: 160,
+                    child: Card(
+                      child: Wrap(children: [
+                        Image.asset(Imageval),
+                      ],
+                      ),
+                    ),
+                  );
+  }
+  Container Gridview_img (String Gridval, String heading){
+    return Container(
+      width: 160,
+                    child: Card(
+                      child: Wrap(children: [
+                        Image.asset(Gridval,fit: BoxFit.fill,),
+                        ListTile(
+                          title: Text(heading),
+                        ),
+                      ],
+                      ),
+                    ),
+    );
+  }
  final imagepaths = [
    'images/ui elements/homepage/banner_1.png',
     'images/ui elements/homepage/banner_2.png'
@@ -116,7 +141,56 @@ class _HomepageState extends State<Homepage> {
                 ],
               ),
             ),
-            
+            Container(
+              margin: EdgeInsets.symmetric(vertical: 20.0),
+              height: 150,
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                children: [
+                  ListView_horizontal('images/ui elements/homepage/product23.png'),
+                  ListView_horizontal('images/ui elements/homepage/product2.png'),
+                  ListView_horizontal('images/ui elements/homepage/product23.png'),
+                  ListView_horizontal('images/ui elements/homepage/product2.png'),
+                  ListView_horizontal('images/ui elements/homepage/product23.png'),
+                  ListView_horizontal('images/ui elements/homepage/product2.png'),
+                  ListView_horizontal('images/ui elements/homepage/product23.png'),
+                  ListView_horizontal('images/ui elements/homepage/product2.png'),                 
+                ],
+              ),
+            ),
+          Row(
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(left: 20),
+                child: Text('FLASH SALE',style: TextStyle(fontSize: 30.0),),
+              )
+            ],
+          ),
+          Container(
+            // margin: EdgeInsets.symmetric(vertical: 10.0),
+              height: 200,
+            child: GridView(gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 4,mainAxisSpacing: 30),
+            children: [
+              Gridview_img('images/ui elements/homepage/bag.png','Designer bags'),
+              Gridview_img('images/ui elements/homepage/lehenga.png','Lehenga'),
+              Gridview_img('images/ui elements/homepage/Indowestern.png','Indo western'),
+              Gridview_img('images/ui elements/homepage/nonbrand.png','Home Decor'),
+              Gridview_img('images/ui elements/homepage/bag.png','Designer bags'),
+              Gridview_img('images/ui elements/homepage/lehenga.png','Lehenga'),
+              Gridview_img('images/ui elements/homepage/Indowestern.png','Indo western'),
+              Gridview_img('images/ui elements/homepage/nonbrand.png','Home Decor'),
+              Gridview_img('images/ui elements/homepage/bag.png','Designer bags'),
+              Gridview_img('images/ui elements/homepage/lehenga.png','Lehenga'),
+              Gridview_img('images/ui elements/homepage/Indowestern.png','Indo western'),
+              Gridview_img('images/ui elements/homepage/nonbrand.png','Home Decor'),
+            ],
+            ),
+          ),
+          Container(
+            height: MediaQuery.of(context).size.height*1/4.5,
+              width: MediaQuery.of(context).size.width,
+              child: Image(image: AssetImage('images/ui elements/homepage/bottomline.png'),fit: BoxFit.fill,),
+          ),
           ],
         ),
       ),),

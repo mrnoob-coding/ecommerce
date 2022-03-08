@@ -13,6 +13,8 @@ class _HomepageState extends State<Homepage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        flexibleSpace: Container(decoration: BoxDecoration(image: ),),
+
         leading: Icon(Icons.search),
         title: Row(
           mainAxisAlignment: MainAxisAlignment.center,

@@ -13,7 +13,7 @@ class _HomepageState extends State<Homepage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        flexibleSpace: Container(decoration: BoxDecoration(image: ),),
+        flexibleSpace: Container(decoration: BoxDecoration(image: DecorationImage(image:AssetImage('images/homepage/royals-img-1 1.png') )),),
 
         leading: Icon(Icons.search),
         title: Row(

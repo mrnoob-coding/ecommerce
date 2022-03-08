@@ -1,3 +1,4 @@
+import 'package:ecommerce/homepage.dart';
 import 'package:ecommerce/splash.dart';
 import 'package:flutter/material.dart';
 
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      home: const Splash(),
+      home: Homepage(),
     );
   }
 }

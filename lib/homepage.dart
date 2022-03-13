@@ -1,4 +1,6 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
+import 'package:ecommerce/login.dart';
+import 'package:ecommerce/register.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
@@ -118,7 +120,7 @@ class _HomepageState extends State<Homepage> {
                       size: 25,
                       color: Colors.black,
                     )),
-                label: 'Discover',
+                label: 'Login',
                 
                 ),
             BottomNavigationBarItem(
@@ -127,6 +129,7 @@ class _HomepageState extends State<Homepage> {
                       setState(() {
                         print('button preseed2');
                         currentIndex = 1;
+                        Navigator.of(context).push(MaterialPageRoute(builder: ((context) => LoginPage())));
                       });
                     },
                     icon: Icon(
@@ -134,13 +137,15 @@ class _HomepageState extends State<Homepage> {
                       size: 25,
                       color: Colors.black,
                     )),
-                label: 'Catagory'),
+                label: 'Register'),
             BottomNavigationBarItem(
               icon: IconButton(
                   onPressed: () {
                     setState(() {
                       print('button preseed3');
                       currentIndex = 2;
+
+                        Navigator.of(context).push(MaterialPageRoute(builder: ((context) => RegisterPage())));
                     });
                   },
                   icon: Icon(
@@ -189,7 +194,7 @@ class _HomepageState extends State<Homepage> {
                 children: [
                   Container(
                     height: 20.0,
-                    width: MediaQuery.of(context).size.width * 3 / 4,
+                    width: MediaQuery.of(context).size.width,
                     color: Color(0xffFFAC00),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -214,18 +219,29 @@ class _HomepageState extends State<Homepage> {
                           'MADE IN INDIA',
                           style: TextStyle(fontSize: 10),
                         ),
+                         Text(
+                          ' | ',
+                          style: TextStyle(fontSize: 10),
+                        ),
+                        Container(
+                          color: Color(0xffFCC129,),
+                          child: Text(
+                            'MADE IN INDIA',
+                            style: TextStyle(fontSize: 10),
+                          ),
+                        ),
                       ],
                     ),
                   ),
-                  Container(
-                    height: 20.0,
-                    width: MediaQuery.of(context).size.width * 1 / 4,
-                    color: Color(0xffFCC129),
-                    child: Text(
-                      'ROYALS OF ROYALOOO',
-                      style: TextStyle(fontSize: 10),
-                    ),
-                  )
+                  // Container(
+                  //   height: 20.0,
+                  //   width: MediaQuery.of(context).size.width * 1 / 4,
+                  //   color: Color(0xffFCC129),
+                  //   child: Text(
+                  //     'ROYALS OF ROYALOOO',textAlign: TextAlign.center,
+                  //     style: TextStyle(fontSize: 10),
+                  //   ),
+                  // )
                 ],
               ),
               Container(

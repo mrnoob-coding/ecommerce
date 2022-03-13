@@ -1,6 +1,6 @@
 import 'package:ecommerce/login.dart';
 import 'package:flutter/material.dart';
-import 'package:velocity_x/velocity_x.dart';
+
 
 class RegisterPage extends StatefulWidget {
   const RegisterPage({Key? key}) : super(key: key);
@@ -22,7 +22,7 @@ class _RegisterPageState extends State<RegisterPage> {
                 top: 370,
                 width: 500,
                 child: Image(
-                  image: AssetImage('images/login/Rectangle 28.png'),
+                  image: AssetImage('images/ui elements/login/Rectangle 28.png'),
                   fit: BoxFit.cover,
                 ),
               ),
@@ -46,8 +46,8 @@ class _RegisterPageState extends State<RegisterPage> {
                             ),
                             child: Image(
                                 image: AssetImage(
-                                    'images/login/Rectangle 26.png'))),
-                        Image(image: AssetImage('images/logo52.png'))
+                                    'images/ui elements/login/Rectangle 26.png'))),
+                        Image(image: AssetImage('images/logo5.png'))
                       ],
                     ),
                   ),
@@ -57,13 +57,13 @@ class _RegisterPageState extends State<RegisterPage> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Image(image: AssetImage('images/login/floral22.png')),
+                      Image(image: AssetImage('images/ui elements/login/floral22.png')),
                       Text(
                         'REGISTER',
                         style: TextStyle(fontWeight: FontWeight.bold),
                         textScaleFactor: 2,
                       ),
-                      Image(image: AssetImage('images/login/floral21.png')),
+                      Image(image: AssetImage('images/ui elements/login/floral21.png')),
                     ],
                   ),
                   SizedBox(
@@ -148,7 +148,7 @@ class _RegisterPageState extends State<RegisterPage> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Image(image: AssetImage('images/login/Line 6.png')),
+                      Image(image: AssetImage('images/ui elements/login/Line 6.png')),
                       SizedBox(
                         width: 10,
                       ),
@@ -160,7 +160,7 @@ class _RegisterPageState extends State<RegisterPage> {
                       SizedBox(
                         width: 10,
                       ),
-                      Image(image: AssetImage('images/login/Line 6.png')),
+                      Image(image: AssetImage('images/ui elements/login/Line 6.png')),
                     ],
                   ),
                   SizedBox(
